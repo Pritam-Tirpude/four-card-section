@@ -1,0 +1,189 @@
+@import "global";
+
+main {
+  @include flex(center, center, column);
+  padding: 5rem 5rem;
+  min-height: 100vh;
+}
+
+.content {
+  h1 {
+    font-weight: lighter;
+    font-size: $header1;
+    text-align: center;
+    color: $neutral_very_dark_blue;
+  }
+
+  h2 {
+    font-weight: bolder;
+    font-size: $header2;
+    text-align: center;
+    color: $neutral_very_dark_blue;
+  }
+
+  p {
+    margin-top: 5rem;
+    font-size: $header4;
+    text-align: center;
+    color: $neutral_grayish_blue;
+  }
+}
+
+.cards {
+  display: grid;
+  grid-gap: 2rem;
+  margin-top: 5rem;
+  grid-template-columns: repeat(3, 1fr);
+
+  .superviser {
+    position: relative;
+    bottom: 15rem;
+    grid-row: 2 / 2;
+    padding: 2rem 2rem;
+    border-radius: 1rem;
+    min-height: 40vh;
+    border-top: 4px solid $primary_cyan;
+    box-shadow: 0px 10px 10px rgba($color: #000000, $alpha: 0.2),
+      0px 20px 40px rgba($color: #000000, $alpha: 0.2);
+    background-image: url("../images/icon-supervisor.svg");
+    background-repeat: no-repeat;
+    background-position: 90% 90%;
+
+    h3 {
+      font-size: $header4;
+      color: $neutral_very_dark_blue;
+    }
+
+    p {
+      margin-top: 2rem;
+      font-size: $header5;
+      color: $neutral_grayish_blue;
+    }
+  }
+
+  .team-builder {
+    grid-column: 2/2;
+    padding: 2rem 2rem;
+    min-height: 40vh;
+    border-radius: 1rem;
+    border-top: 4px solid $primary_red;
+    box-shadow: 0px 10px 10px rgba($color: #000000, $alpha: 0.2),
+      0px 20px 40px rgba($color: #000000, $alpha: 0.2);
+    background-image: url("../images/icon-team-builder.svg");
+    background-repeat: no-repeat;
+    background-position: 90% 90%;
+
+    h3 {
+      font-size: $header4;
+      color: $neutral_very_dark_blue;
+    }
+
+    p {
+      margin-top: 2rem;
+      font-size: $header5;
+      color: $neutral_grayish_blue;
+    }
+
+    img {
+      margin-top: 12rem;
+      float: inline-end;
+    }
+  }
+
+  .karma {
+    grid-row: 2/3;
+    padding: 2rem 2rem;
+    min-height: 40vh;
+    border-radius: 1rem;
+    border-top: 4px solid $primary_orange;
+    box-shadow: 0px 10px 10px rgba($color: #000000, $alpha: 0.2),
+      0px 20px 40px rgba($color: #000000, $alpha: 0.2);
+    background-image: url("../images/icon-karma.svg");
+    background-repeat: no-repeat;
+    background-position: 90% 90%;
+
+    h3 {
+      font-size: $header4;
+      color: $neutral_very_dark_blue;
+    }
+
+    p {
+      margin-top: 2rem;
+      font-size: $header5;
+      color: $neutral_grayish_blue;
+    }
+
+    img {
+      margin-top: 12rem;
+      float: inline-end;
+    }
+  }
+
+  .calculator {
+    position: relative;
+    bottom: 15rem;
+    grid-row: 2/2;
+    padding: 2rem 2rem;
+    min-height: 40vh;
+    border-radius: 1rem;
+    border-top: 4px solid $primary_blue;
+    box-shadow: 0px 10px 10px rgba($color: #000000, $alpha: 0.2),
+      0px 20px 40px rgba($color: #000000, $alpha: 0.2);
+    background-image: url("../images/icon-calculator.svg");
+    background-repeat: no-repeat;
+    background-position: 90% 90%;
+
+    h3 {
+      font-size: $header4;
+      color: $neutral_very_dark_blue;
+    }
+
+    p {
+      margin-top: 2rem;
+      font-size: $header5;
+      color: $neutral_grayish_blue;
+    }
+
+    img {
+      margin-top: 12rem;
+      float: inline-end;
+    }
+  }
+}
+
+.attribution {
+  font-size: 1.5rem;
+  text-align: center;
+}
+.attribution a {
+  color: $primary_red;
+}
+
+// Media Query
+@media screen and (max-width: 1200px) {
+  main {
+    @include flex(center, center, column);
+  }
+
+  .cards {
+    margin-top: 5rem;
+    display: block;
+
+    .superviser {
+      bottom: 0rem;
+    }
+
+    .team-builder {
+      margin-top: 2rem;
+    }
+
+    .karma {
+      margin-top: 2rem;
+    }
+
+    .calculator {
+      bottom: 0rem;
+      margin-top: 2rem;
+    }
+  }
+}
